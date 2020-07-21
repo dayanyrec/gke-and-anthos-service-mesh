@@ -42,4 +42,5 @@ gcloud container hub memberships register ${CLUSTER_NAME} \
     --gke-cluster=${CLUSTER_LOCATION}/${CLUSTER_NAME} \
     --service-account-key-file=${SERVICE_ACCOUNT_KEY_PATH}
 
+echo "Enable istio injection"
 kubectl label namespace default istio-injection=enabled --overwrite
